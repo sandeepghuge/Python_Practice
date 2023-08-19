@@ -7,7 +7,9 @@ import os
 from PIL import Image
 
 #Define path to PDF file
-file_path = "./pdfs/image-based-pdf-sample.pdf"
+print(os.getcwd())
+current_root_folder= os.getcwd()
+file_path = current_root_folder+"/pdf_to_image/pdfs/image-based-pdf-sample.pdf"
 
 #Open PDF file
 pdf_file= fitz.open(file_path)
@@ -40,7 +42,7 @@ for i, image in enumerate(images_list, start=1):
     #Store image extension
     image_ext = base_image['ext']
 
-    images_path="images/"
+    images_path=current_root_folder+"/pdf_to_image/images/"
 
     #Generate image file name
     image_name = str(i) + '.' + image_ext
