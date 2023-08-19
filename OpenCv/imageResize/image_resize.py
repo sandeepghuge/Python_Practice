@@ -4,9 +4,9 @@ import os
 current_root_folder= os.getcwd()
 print("Root folder name="+current_root_folder)
 project_folder="/OpenCv/imageResize"
-input_image_folder="/inputImage/"
-output_image_folder="/outputImage/"
-image= cv2.imread(current_root_folder+project_folder+input_image_folder+"1.jpeg")
+input_folder="/inputImage/"
+output_folder="/outputImage/"
+image= cv2.imread(current_root_folder+project_folder+input_folder+"1.jpeg")
 
 # Get original height and width
 print(f"Original Dimensions : {image.shape}")
@@ -23,5 +23,5 @@ updatedWidth= int(width/2)
 resized = cv2.resize(image, (updatedWidth, updatedHeight ))
 
 print(f"Resized Dimensions : {resized.shape}")
-cv2.imwrite(current_root_folder+project_folder+output_image_folder+'resized_imaged.jpg', resized)
+cv2.imwrite(current_root_folder+project_folder+output_folder+'resized_imaged.jpg', resized)
 

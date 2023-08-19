@@ -7,9 +7,12 @@ import os
 from PIL import Image
 
 #Define path to PDF file
-print(os.getcwd())
 current_root_folder= os.getcwd()
-file_path = current_root_folder+"/pdf_to_image/pdfs/image-based-pdf-sample.pdf"
+print("Root folder name="+current_root_folder)
+project_folder="/OpenCv/PIL/pdf_to_image"
+input_folder="/pdfs/"
+output_folder="/images/"
+file_path = current_root_folder+project_folder+input_folder+"image-based-pdf-sample.pdf"
 
 #Open PDF file
 pdf_file= fitz.open(file_path)
@@ -42,7 +45,7 @@ for i, image in enumerate(images_list, start=1):
     #Store image extension
     image_ext = base_image['ext']
 
-    images_path=current_root_folder+"/pdf_to_image/images/"
+    images_path=current_root_folder+project_folder+output_folder
 
     #Generate image file name
     image_name = str(i) + '.' + image_ext
