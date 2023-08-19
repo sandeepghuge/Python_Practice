@@ -12,7 +12,7 @@ print("Root folder name="+current_root_folder)
 project_folder="/OpenCv/PIL/pdf_to_image"
 input_folder="/pdfs/"
 output_folder="/images/"
-file_path = current_root_folder+project_folder+input_folder+"Sandeep_Ghuge.pdf"
+file_path = current_root_folder+project_folder+input_folder+"image-based-pdf-sample.pdf"
 
 #Open PDF file
 pdf_file= fitz.open(file_path)
